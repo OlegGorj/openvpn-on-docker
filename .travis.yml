@@ -14,3 +14,16 @@ env:
     - GIT_REPO_LINK: "https://github.com/OlegGorj/openvpn-on-docker.git#master"
     - IMAGE: "openvpn"
     - TAG: "latest"
+
+branches:
+  only:
+    - master
+    - /^(?i:deploy)-.*$/
+
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - cmake
