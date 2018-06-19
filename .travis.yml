@@ -1,0 +1,16 @@
+language: bash
+
+sudo: required
+
+services: docker
+
+env:
+  global:
+    - VERSION: "0.10.0"
+    - BUILD_DATE: $(date -u +"%Y-%m-%dT%H:%M:%SZ")
+    - REPO: $DOCKER_USERNAME
+    - TAG_MINOR: ${VERSION%.*}
+    - TAG_MAJOR: ${VERSION%%.*}
+    - GIT_REPO_LINK: "https://github.com/OlegGorj/openvpn-on-docker.git#master"
+    - IMAGE: "openvpn"
+    - TAG: "latest"
