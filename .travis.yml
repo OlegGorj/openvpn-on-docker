@@ -27,3 +27,13 @@ addons:
       - libelf-dev
       - libdw-dev
       - cmake
+
+before_install:
+  - docker info
+  - docker version
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - sudo apt-get update
+  - sudo apt-get install git-all
+
+install:
+  - git --version
