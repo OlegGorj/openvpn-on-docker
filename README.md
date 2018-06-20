@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/OlegGorj/openvpn-on-docker.svg?branch=master)](https://travis-ci.org/OlegGorj/openvpn-on-docker)
+[![GitHub Issues](https://img.shields.io/github/issues/OlegGorJ/openvpn-on-docker.svg)](https://github.com/OlegGorJ/openvpn-on-docker/issues)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Percentage of issues still open")
 
 # OpenVPN on docker container
 
