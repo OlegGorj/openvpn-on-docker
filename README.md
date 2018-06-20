@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/OlegGorj/openvpn-on-docker.svg?branch=master)](https://travis-ci.org/OlegGorj/openvpn-on-docker)
+
 # OpenVPN on docker container
 
 Implementation of OpenVPN on Docker container
