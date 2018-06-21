@@ -72,7 +72,6 @@ if [ ! -c /dev/net/tun ]; then
     mknod /dev/net/tun c 10 200
 fi
 
-
 if [ -n "${OVPN_STATUS}" ]; then
     addArg "--status" "${OVPN_STATUS}"
     /sbin/print-status.sh ${OVPN_STATUS} &
@@ -83,6 +82,9 @@ if [ $DEBUG ]; then
     cat $OVPN_CONFIG
 fi
 
+echo "$(date "+%a %b %d %H:%M:%S %Y") Running 'OpenVPN AS'"
+cd ~/ && wget http://swupdate.openvpn.org/as/openvpn-as-2.5.2-Ubuntu16.amd_64.deb
+sudo dpkg -i openvpn-as-2.5.2-Ubuntu16.amd_64.deb
+
 echo "$(date "+%a %b %d %H:%M:%S %Y") Running 'openvpn ${ARGS[@]} ${USER_ARGS[@]}'"
 exec openvpn "${ARGS[@]}" "${USER_ARGS[@]}" 1> /dev/stderr 2> /dev/stderr
-
