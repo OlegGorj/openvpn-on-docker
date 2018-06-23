@@ -3,8 +3,9 @@ FROM alpine:3.6
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories && \
     echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
-    apk add --update openvpn bash easy-rsa libintl inotify-tools openvpn-auth-pam google-authenticator pamtester && \
+    apk add --update openvpn iptables bash easy-rsa libintl inotify-tools openvpn-auth-pam google-authenticator pamtester && \
     apk add --virtual temppkg gettext &&  \
+    apk --update add sudo &&  \
     cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
     apk del temppkg && \
@@ -38,4 +39,3 @@ COPY openvpn.tmpl $OVPN_TEMPLATE
 #ADD ./otp/openvpn /etc/pam.d/
 
 CMD ["/sbin/entrypoint.sh"]
-
