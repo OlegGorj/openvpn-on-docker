@@ -37,7 +37,6 @@ before_install:
 
 install:
   - git --version
-  - git clone https://github.com/OlegGorj/openvpn-on-docker.git
-  - sudo docker build -t ${REPO}/${IMAGE}:${TAG} .
+  - git clone https://github.com/OlegGorj/openvpn-on-docker.git && cd openvpn-on-docker && sudo docker build -t ${REPO}/${IMAGE}:${TAG} .
   - sudo docker image push ${REPO}/${IMAGE}:${TAG}
   - sudo docker image pull ${REPO}/${IMAGE}:${TAG}
