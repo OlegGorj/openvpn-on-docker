@@ -58,7 +58,8 @@ envsubst < $OVPN_TEMPLATE > $OVPN_CONFIG
 #      iptables -t nat -A POSTROUTING -s $OVPN_NETWORK -o $OVPN_NATDEVICE -j MASQUERADE
 #    }
 #fi
-iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+echo "$(date "+%a %b %d %H:%M:%S %Y") Configuring net iptables"
+sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 # Use client configuration directory if it exists.
 if [ -d "$OVPN_CCD" ]; then
