@@ -84,9 +84,9 @@ if [ $DEBUG ]; then
     cat $OVPN_CONFIG
 fi
 
-echo "$(date "+%a %b %d %H:%M:%S %Y") Running 'OpenVPN AS'"
-cd ~/ && wget http://swupdate.openvpn.org/as/openvpn-as-2.5.2-Ubuntu16.amd_64.deb
-sudo dpkg -i openvpn-as-2.5.2-Ubuntu16.amd_64.deb
+echo "$(date "+%a %b %d %H:%M:%S %Y") Deploying and running 'OpenVPN AS'"
+#cd ~ && wget http://swupdate.openvpn.org/as/openvpn-as-2.5.2-Ubuntu16.amd_64.deb
+#sudo dpkg -i openvpn-as-2.5.2-Ubuntu16.amd_64.deb
 
 echo "$(date "+%a %b %d %H:%M:%S %Y") Running 'openvpn ${ARGS[@]} ${USER_ARGS[@]}'"
 exec openvpn "${ARGS[@]}" "${USER_ARGS[@]}" 1> /dev/stderr 2> /dev/stderr
