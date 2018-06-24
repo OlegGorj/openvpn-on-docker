@@ -2,6 +2,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/OlegGorJ/openvpn-on-docker.svg)](https://github.com/OlegGorJ/openvpn-on-docker/issues)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Percentage of issues still open")
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker?ref=badge_shield)
 
 # OpenVPN on docker container
 
@@ -23,3 +24,7 @@ To generate `ovpn` file:
 ```
 docker run --user=$(id -u) -e OVPN_DEFROUTE=1 -e OVPN_SERVER_URL=tcp://$INGRESS_IP_ADDRESS:80 -v $PWD:/etc/openvpn --rm oleggorj/openvpn ovpn_getclient $CLIENTNAME > ${CLIENTNAME}.ovpn
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker?ref=badge_large)
