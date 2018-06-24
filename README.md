@@ -2,10 +2,14 @@
 [![GitHub Issues](https://img.shields.io/github/issues/OlegGorJ/openvpn-on-docker.svg)](https://github.com/OlegGorJ/openvpn-on-docker/issues)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Percentage of issues still open")
+[![Docker Stars](https://img.shields.io/docker/stars/OlegGorJ/openvpn.svg)](https://hub.docker.com/r/OlegGorJ/openvpn/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/OlegGorJ/openvpn.svg)](https://hub.docker.com/r/OlegGorJ/openvpn/)
+[![ImageLayers](https://images.microbadger.com/badges/image/OlegGorJ/openvpn-on-docker.svg)](https://microbadger.com/#/images/OlegGorJ/openvpn-on-docker)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker?ref=badge_shield)
 
 # OpenVPN on docker container
 
-Implementation of OpenVPN on Docker container
+OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
 To setup VPN clients, generate VPN client credentials for `CLIENTNAME` without password protection; leave 'nopass' out to enter password.
 
