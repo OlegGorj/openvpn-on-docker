@@ -17,7 +17,7 @@ env:
 
 branches:
   only:
-    - master
+    - dev_branch
     - /^(?i:deploy)-.*$/
 
 addons:
