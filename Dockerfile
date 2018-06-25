@@ -6,7 +6,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/reposi
     apk --update add sudo &&  \
     apk add --virtual temppkg gettext &&  \
     apk del temppkg && \
-    cp /usr/bin/envsubst /usr/local/bin/envsubst && \
     ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
     rm -rf /tmp/* /var/tmp/* /var/cache/apk/* /var/cache/distfiles/*
 
