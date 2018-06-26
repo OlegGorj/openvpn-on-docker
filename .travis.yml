@@ -17,7 +17,7 @@ env:
 
 branches:
   only:
-    - master
+    - dev_branch
     - /^(?i:deploy)-.*$/
 
 addons:
@@ -35,6 +35,7 @@ install:
     - git clone https://github.com/docker-library/official-images.git official-images
 
 before_script:
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - image="oleggorj/openvpn"
     - docker build -t "$image" .
     - docker inspect "$image"
@@ -44,7 +45,6 @@ before_script:
 
 script:
     - official-images/test/run.sh "$image"
-    - test/run.sh "$image"
 
 after_script:
     - docker images
