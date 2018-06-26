@@ -16,14 +16,36 @@ To setup VPN clients, generate VPN client credentials for `CLIENTNAME` without p
 ```
 ENDPOINT_SERVER=<external IP of bastion instance>
 CLIENTNAME=openvpn
+```
 
-docker run --user=$(id -u) -e OVPN_CN=$ENDPOINT_SERVER  -e OVPN_SERVER_URL=tcp://$ENDPOINT_SERVER:1194 -i -v $PWD:/etc/openvpn oleggorj/openvpn ovpn_initpki nopass $ENDPOINT_SERVER
+To create docker volume:
 
-docker run --user=$(id -u) -v $PWD:/etc/openvpn -ti oleggorj/openvpn easyrsa build-client-full $CLIENTNAME nopass
+```
+OVPN_DATA="ovpn-data-vol"
+docker volume create --name $OVPN_DATA
+```
+
+Initialize the $OVPN_DATA container that will hold the configuration files and certificates. The container will prompt for a passphrase to protect the private key used by the newly generated certificate authority
+
+```
+docker run -v $OVPN_DATA:/etc/openvpn --log-driver=none --rm oleggorj/openvpn ovpn_genconfig -u udp://$ENDPOINT_SERVER
+docker run -v $OVPN_DATA:/etc/openvpn --log-driver=none --rm -it oleggorj/openvpn ovpn_initpki
+```
+
+Start OpenVPN server process:
+
+```
+docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN oleggorj/openvpn
+```
+
+Generate a client certificate:
+
+```
+docker run -v $OVPN_DATA:/etc/openvpn --log-driver=none --rm -it oleggorj/openvpn easyrsa build-client-full $CLIENTNAME nopass
 ```
 
 To generate `ovpn` file:
 
 ```
-docker run --user=$(id -u) -e OVPN_DEFROUTE=1 -e OVPN_SERVER_URL=tcp://$INGRESS_IP_ADDRESS:80 -v $PWD:/etc/openvpn --rm oleggorj/openvpn ovpn_getclient $CLIENTNAME > ${CLIENTNAME}.ovpn
+docker run -v $OVPN_DATA:/etc/openvpn --log-driver=none --rm oleggorj/openvpn ovpn_getclient $CLIENTNAME > $CLIENTNAME.ovpn
 ```
