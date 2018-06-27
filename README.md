@@ -80,5 +80,9 @@ openvpn --config $CLIENTNAME.ovpn
 ```
 
 
+## Links and references
+
+[(Wiki setting up a OpenVPN server)](https://wiki.alpinelinux.org/w/index.php?title=Setting_up_a_OpenVPN_server&redirect=no)
+
 
 ---
