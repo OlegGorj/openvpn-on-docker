@@ -4,7 +4,7 @@
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Percentage of issues still open")
 [![Docker Stars](https://img.shields.io/docker/stars/OlegGorJ/openvpn.svg)](https://hub.docker.com/r/OlegGorJ/openvpn/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/OlegGorJ/openvpn.svg)](https://hub.docker.com/r/OlegGorJ/openvpn/)
-[![ImageLayers](https://images.microbadger.com/badges/image/OlegGorJ/openvpn-on-docker.svg)](https://microbadger.com/#/images/OlegGorJ/openvpn-on-docker)
+[![ImageLayers](https://images.microbadger.com/badges/image/OlegGorJ/openvpn.svg)](https://microbadger.com/#/images/OlegGorJ/openvpn)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker?ref=badge_shield)
 
 # OpenVPN on docker container
