@@ -3,7 +3,7 @@ FROM alpine:latest
 # Testing: pamtester
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing/" >> /etc/apk/repositories && \
     apk add --update openvpn iptables bash easy-rsa openvpn-auth-pam google-authenticator pamtester libintl inotify-tools && \
-    apk --update add sudo &&  \
+    apk --update add sudo dpkg &&  \
     apk add --virtual temppkg gettext &&  \
     apk del temppkg && \
     ln -s /usr/share/easy-rsa/easyrsa /usr/local/bin && \
