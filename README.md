@@ -2,14 +2,15 @@
 [![GitHub Issues](https://img.shields.io/github/issues/OlegGorJ/openvpn-on-docker.svg)](https://github.com/OlegGorJ/openvpn-on-docker/issues)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/OlegGorJ/openvpn-on-docker.svg)](http://isitmaintained.com/project/OlegGorJ/openvpn-on-docker "Percentage of issues still open")
-[![Docker Stars](https://img.shields.io/docker/stars/OlegGorJ/openvpn.svg)](https://hub.docker.com/r/OlegGorJ/openvpn/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/OlegGorJ/openvpn.svg)](https://hub.docker.com/r/OlegGorJ/openvpn/)
-[![ImageLayers](https://images.microbadger.com/badges/image/OlegGorJ/openvpn-on-docker.svg)](https://microbadger.com/#/images/OlegGorJ/openvpn-on-docker)
+[![Docker Stars](https://img.shields.io/docker/stars/oleggorj/openvpn.svg)](https://hub.docker.com/r/oleggorj/openvpn/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/oleggorj/openvpn.svg)](https://hub.docker.com/r/oleggorj/openvpn/)
+[![ImageLayers](https://images.microbadger.com/badges/image/oleggorj/openvpn.svg)](https://microbadger.com/#/images/oleggorj/openvpn)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOlegGorj%2Fopenvpn-on-docker?ref=badge_shield)
 
 # OpenVPN on docker container
 
 OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
+
 
 ### OpenVPN deployment details
 
@@ -65,6 +66,7 @@ docker run -v $OVPN_DATA:/etc/openvpn --log-driver=none --rm oleggorj/openvpn ov
 ```
 
 
+
 ## Debug
 
 Create an environment variable with the name DEBUG and value of 1 to enable debug output (using "docker -e").
@@ -80,9 +82,13 @@ openvpn --config $CLIENTNAME.ovpn
 ```
 
 
+
 ## Links and references
 
 [(Wiki setting up a OpenVPN server)](https://wiki.alpinelinux.org/w/index.php?title=Setting_up_a_OpenVPN_server&redirect=no)
+
+[(Openvpn-AS Docker container)](https://hub.docker.com/r/linuxserver/openvpn-as/)
+
 
 
 ---
