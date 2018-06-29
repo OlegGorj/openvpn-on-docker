@@ -85,9 +85,10 @@ openvpn --config $CLIENTNAME.ovpn
 
 ## Links and references
 
-[(Wiki setting up a OpenVPN server)](https://wiki.alpinelinux.org/w/index.php?title=Setting_up_a_OpenVPN_server&redirect=no)
+Very useful link [Wiki setting up a OpenVPN server](https://wiki.alpinelinux.org/w/index.php?title=Setting_up_a_OpenVPN_server&redirect=no)
 
-[(Openvpn-AS Docker container)](https://hub.docker.com/r/linuxserver/openvpn-as/)
+[Openvpn-AS Docker container](https://hub.docker.com/r/linuxserver/openvpn-as/) that is used to deploy OpenVPN Access Server on Bastion instance to manage and configure OpenVPN.
+
 
 
 
