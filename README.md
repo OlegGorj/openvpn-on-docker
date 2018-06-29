@@ -11,6 +11,7 @@
 
 OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
+
 ### OpenVPN deployment details
 
 - Use `tun` mode, because it works on the widest range of devices. tap mode, for instance, does not work on Android, except if the device is rooted.
@@ -65,6 +66,7 @@ docker run -v $OVPN_DATA:/etc/openvpn --log-driver=none --rm oleggorj/openvpn ov
 ```
 
 
+
 ## Debug
 
 Create an environment variable with the name DEBUG and value of 1 to enable debug output (using "docker -e").
@@ -80,10 +82,13 @@ openvpn --config $CLIENTNAME.ovpn
 ```
 
 
+
 ## Links and references
 
 [(Wiki setting up a OpenVPN server)](https://wiki.alpinelinux.org/w/index.php?title=Setting_up_a_OpenVPN_server&redirect=no)
 
 [(Openvpn-AS Docker container)](https://hub.docker.com/r/linuxserver/openvpn-as/)
+
+
 
 ---
