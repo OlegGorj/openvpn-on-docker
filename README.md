@@ -18,7 +18,7 @@ OpenVPN server in a Docker container complete with an EasyRSA PKI CA.
 
 - The topology used is `net30`, because it works on the widest range of OS.
 
-- The UDP server uses192.168.255.0/24 for dynamic clients by default.
+- The UDP server uses `192.168.255.0/24` for dynamic clients by default.
 
 - The client profile specifies redirect-gateway def1, meaning that after establishing the VPN connection, all traffic will go through the VPN.
 
